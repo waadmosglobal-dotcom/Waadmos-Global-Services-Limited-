@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="WAADMOS GLOBAL SERVICES LIMITED creates professional book banners, book trailers, and book mockups to help authors present and promote their books.">
+  <meta name="theme-color" content="#101827">
+  <title>WAADMOS GLOBAL SERVICES LIMITED | Book Design & Promotion</title>
+  <style>
+    :root {
+      --ink: #101827;
+      --ink-2: #17243a;
+      --gold: #e8b45c;
+      --gold-dark: #c58b2d;
+      --cream: #fffaf1;
+      --muted: #657084;
+      --white: #fff;
+      --line: #e8e9ed;
+      --shadow: 0 18px 50px rgba(16,24,39,.12);
+      --radius: 22px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+    body { margin: 0; font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif; color: var(--ink); background: #fff; line-height: 1.6; }
+    a { color: inherit; text-decoration: none; }
+    button, input, select, textarea { font: inherit; }
+    button, a { -webkit-tap-highlight-color: transparent; }
+    .container { width: min(1120px, calc(100% - 40px)); margin: 0 auto; }
+    .topbar { background: #0a101c; color: #e9edf5; font-size: .88rem; padding: 9px 0; }
+    .topbar-inner { display: flex; justify-content: space-between; gap: 14px; flex-wrap: wrap; }
+    .topbar a:hover { color: var(--gold); }
+    header { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.96); backdrop-filter: blur(14px); border-bottom: 1px solid rgba(16,24,39,.08); }
+    .nav { min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+    .brand { display: flex; align-items: center; gap: 12px; min-width: 0; }
+    .brand-mark { width: 45px; height: 45px; display: grid; place-items: center; flex: 0 0 auto; border-radius: 14px; color: var(--ink); background: var(--gold); font-weight: 900; letter-spacing: -1px; }
+    .brand-name { font-weight: 900; line-height: 1.15; font-size: .97rem; letter-spacing: .02em; }
+    .brand-tag { display: block; color: var(--muted); font-size: .72rem; font-weight: 600; margin-top: 4px; }
+    .nav-links { display: flex; align-items: center; gap: 24px; font-size: .93rem; font-weight: 700; }
+    .nav-links a:not(.btn):hover { color: var(--gold-dark); }
+    .menu-toggle { display: none; border: 0; background: transparent; font-size: 1.7rem; padding: 5px 8px; cursor: pointer; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; gap: 9px; padding: 13px 20px; border-radius: 999px; border: 1px solid transparent; background: var(--gold); color: var(--ink); font-weight: 800; cursor: pointer; transition: transform .2s, background .2s, box-shadow .2s; text-align: center; }
+    .btn:hover { transform: translateY(-2px); background: #f2c979; box-shadow: 0 9px 24px rgba(232,180,92,.24); }
+    .btn-dark { background: var(--ink); color: white; }
+    .btn-dark:hover { background: #26344b; }
+    .btn-outline { border-color: rgba(255,255,255,.45); color: white; background: transparent; }
+    .btn-outline:hover { background: rgba(255,255,255,.1); }
+    .hero { position: relative; overflow: hidden; background: radial-gradient(circle at 85% 25%, rgba(232,180,92,.2), transparent 30%), linear-gradient(125deg, #0b1220, #18263c 68%, #101827); color: white; padding: 86px 0 92px; }
+    .hero:after { content: ""; position: absolute; width: 390px; height: 390px; border: 1px solid rgba(232,180,92,.18); border-radius: 50%; right: -130px; bottom: -230px; box-shadow: 0 0 0 35px rgba(232,180,92,.025), 0 0 0 70px rgba(232,180,92,.025); }
+    .hero-grid { display: grid; grid-template-columns: 1.08fr .92fr; gap: 55px; align-items: center; position: relative; z-index: 1; }
+    .eyebrow { display: inline-flex; align-items: center; gap: 9px; color: var(--gold); text-transform: uppercase; letter-spacing: .16em; font-size: .76rem; font-weight: 900; }
+    .eyebrow:before { content: ""; width: 28px; height: 2px; background: currentColor; }
+    h1 { font-size: clamp(2.5rem, 5vw, 4.5rem); line-height: 1.06; letter-spacing: -.055em; margin: 20px 0; }
+    h1 span { color: var(--gold); }
+    .hero p { max-width: 610px; color: #d2d9e5; font-size: 1.08rem; margin: 0 0 27px; }
+    .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+    .hero-note { margin-top: 26px; color: #c6cedb; font-size: .9rem; }
+    .hero-note strong { color: white; }
+    .book-scene { min-height: 365px; display: grid; place-items: center; position: relative; perspective: 1000px; }
+    .glow { position: absolute; width: 290px; height: 290px; background: rgba(232,180,92,.13); filter: blur(30px); border-radius: 50%; }
+    .book { width: 220px; height: 300px; position: relative; z-index: 2; transform: rotateY(-19deg) rotateZ(-5deg); transform-style: preserve-3d; border-radius: 5px 14px 14px 5px; background: linear-gradient(145deg, #dca34a, #f4d28d 35%, #b87928); box-shadow: 22px 25px 35px rgba(0,0,0,.35); padding: 24px 20px; color: #182238; text-align: center; display: flex; flex-direction: column; justify-content: space-between; }
+    .book:before { content: ""; position: absolute; top: 0; bottom: 0; left: -12px; width: 12px; transform: skewY(-1deg); background: linear-gradient(90deg,#876022,#f2d18c,#a06c25); border-radius: 4px 0 0 4px; }
+    .book:after { content: ""; position: absolute; inset: 10px 10px 10px 4px; border: 1px solid rgba(24,34,56,.5); pointer-events: none; }
+    .book-kicker { font-size: .58rem; font-weight: 900; letter-spacing: .2em; }
+    .book-title { font-family: Georgia, serif; font-size: 2.05rem; line-height: 1; font-weight: 900; }
+    .book-sub { font-size: .72rem; letter-spacing: .1em; text-transform: uppercase; }
+    .book-author { font-size: .7rem; font-weight: 900; letter-spacing: .14em; }
+    .float-card { position: absolute; z-index: 3; background: white; color: var(--ink); padding: 13px 16px; border-radius: 14px; box-shadow: var(--shadow); font-weight: 800; font-size: .88rem; }
+    .float-card small { display: block; color: var(--muted); font-weight: 600; font-size: .72rem; }
+    .float-one { top: 38px; right: 0; }
+    .float-two { bottom: 30px; left: 0; }
+    section { padding: 82px 0; }
+    .section-head { max-width: 680px; margin: 0 auto 42px; text-align: center; }
+    .section-head .eyebrow { color: var(--gold-dark); }
+    h2 { font-size: clamp(2rem, 3.7vw, 3rem); line-height: 1.13; letter-spacing: -.04em; margin: 12px 0 15px; }
+    .section-head p { color: var(--muted); margin: 0; }
+    .services { background: var(--cream); }
+    .service-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+    .service-card { background: white; border: 1px solid #f0e7d9; border-radius: var(--radius); padding: 28px; transition: transform .2s, box-shadow .2s; }
+    .service-card:hover { transform: translateY(-5px); box-shadow: var(--shadow); }
+    .service-icon { width: 58px; height: 58px; border-radius: 17px; background: #fff0d2; display: grid; place-items: center; font-size: 1.7rem; margin-bottom: 22px; }
+    .service-card h3 { margin: 0 0 10px; font-size: 1.28rem; }
+    .service-card p { margin: 0 0 19px; color: var(--muted); }
+    .text-link { color: #99651b; font-weight: 900; }
+    .text-link:hover { text-decoration: underline; }
+    .why-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: 55px; align-items: center; }
+    .why-panel { background: var(--ink); color: white; border-radius: 28px; padding: 36px; position: relative; overflow: hidden; }
+    .why-panel:after { content: "W"; position: absolute; right: -5px; bottom: -95px; color: rgba(255,255,255,.045); font-size: 18rem; font-weight: 900; line-height: 1; }
+    .why-panel h3 { font-size: 1.7rem; line-height: 1.2; margin: 0 0 13px; position: relative; z-index: 1; }
+    .why-panel p { color: #c7d0df; position: relative; z-index: 1; }
+    .why-list { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+    .why-item { padding: 8px 0; }
+    .check { color: #b57b20; font-size: 1.25rem; font-weight: 900; }
+    .why-item h3 { font-size: 1.05rem; margin: 7px 0 5px; }
+    .why-item p { margin: 0; color: var(--muted); font-size: .94rem; }
+    .process { background: #f7f8fb; }
+    .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+    .step { background: white; border: 1px solid var(--line); border-radius: 18px; padding: 24px; }
+    .step-number { color: var(--gold-dark); font-weight: 900; font-size: .8rem; letter-spacing: .1em; }
+    .step h3 { margin: 9px 0 8px; font-size: 1.1rem; }
+    .step p { color: var(--muted); font-size: .92rem; margin: 0; }
+    .portfolio-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .portfolio-card { border-radius: 20px; overflow: hidden; background: #f3f4f7; border: 1px solid var(--line); }
+    .portfolio-art { min-height: 235px; display: grid; place-items: center; padding: 24px; text-align: center; }
+    .art-banner { background: linear-gradient(135deg, #18243b, #45506a); color: white; }
+    .art-banner div { border: 1px solid var(--gold); padding: 20px 18px; width: 100%; }
+    .art-banner small { color: var(--gold); letter-spacing: .18em; font-weight: 900; }
+    .art-banner strong { display: block; font: 900 2rem/1 Georgia, serif; margin: 10px 0; }
+    .art-trailer { background: radial-gradient(circle, #5a3942, #171523 75%); color: white; }
+    .play { width: 65px; height: 65px; display: grid; place-items: center; border-radius: 50%; border: 2px solid var(--gold); color: var(--gold); font-size: 1.5rem; margin: 0 auto 12px; }
+    .art-mockup { background: linear-gradient(135deg, #e8d6b5, #f9f4e8); }
+    .mini-book { background: linear-gradient(145deg,#263b4a,#0e1b2a); color: #f4d28d; width: 115px; height: 160px; padding: 18px 10px; box-shadow: 10px 12px 18px #0003; display: flex; flex-direction: column; justify-content: space-between; transform: rotate(-7deg); font-family: Georgia,serif; }
+    .mini-book strong { font-size: 1.25rem; line-height: 1; }
+    .portfolio-caption { padding: 17px 20px; background: white; }
+    .portfolio-caption h3 { margin: 0 0 4px; font-size: 1.05rem; }
+    .portfolio-caption p { margin: 0; color: var(--muted); font-size: .9rem; }
+    .portfolio-note { text-align: center; color: var(--muted); font-size: .9rem; margin-top: 20px; }
+    .cta-band { background: linear-gradient(110deg, #e8b45c, #f5d99e); padding: 48px 0; }
+    .cta-inner { display: flex; align-items: center; justify-content: space-between; gap: 25px; }
+    .cta-inner h2 { margin: 0 0 8px; font-size: clamp(1.7rem,3vw,2.5rem); }
+    .cta-inner p { margin: 0; color: #3f3524; }
+    .contact { background: #fff; }
+    .contact-grid { display: grid; grid-template-columns: .8fr 1.2fr; gap: 48px; align-items: start; }
+    .contact-copy p { color: var(--muted); }
+    .contact-details { display: grid; gap: 18px; margin-top: 26px; }
+    .contact-detail { display: flex; align-items: flex-start; gap: 13px; }
+    .detail-icon { width: 43px; height: 43px; display: grid; place-items: center; background: #fff0d2; border-radius: 13px; flex: 0 0 auto; }
+    .contact-detail strong { display: block; margin-bottom: 2px; }
+    .contact-detail span, .contact-detail a { color: var(--muted); overflow-wrap: anywhere; }
+    .contact-form { padding: 30px; border: 1px solid var(--line); border-radius: 24px; box-shadow: 0 10px 35px rgba(16,24,39,.06); }
+    .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 17px; }
+    .field { display: flex; flex-direction: column; gap: 7px; }
+    .field.full { grid-column: 1 / -1; }
+    label { font-weight: 800; font-size: .9rem; }
+    input, select, textarea { width: 100%; padding: 12px 13px; border: 1px solid #dce0e7; border-radius: 11px; background: #fff; color: var(--ink); outline: none; }
+    input:focus, select:focus, textarea:focus { border-color: var(--gold-dark); box-shadow: 0 0 0 3px rgba(232,180,92,.2); }
+    textarea { min-height: 120px; resize: vertical; }
+    .form-help { font-size: .82rem; color: var(--muted); margin: 12px 0 18px; }
+    .form-message { display: none; padding: 12px; border-radius: 10px; margin-top: 12px; background: #e9f8ee; color: #176b37; }
+    footer { background: #0a101c; color: #d5dbe5; padding: 45px 0 20px; }
+    .footer-top { display: flex; justify-content: space-between; gap: 30px; flex-wrap: wrap; padding-bottom: 30px; }
+    footer .brand-name { color: white; }
+    .footer-copy { max-width: 390px; color: #aeb8c8; margin-top: 13px; }
+    .footer-links { display: flex; flex-wrap: wrap; gap: 18px; align-items: flex-start; }
+    .footer-links a:hover { color: var(--gold); }
+    .footer-bottom { border-top: 1px solid #273144; padding-top: 18px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; color: #9ca7b9; font-size: .85rem; }
+    .whatsapp { position: fixed; z-index: 120; right: 19px; bottom: 19px; width: 58px; height: 58px; border-radius: 50%; display: grid; place-items: center; color: white; background: #20b85a; box-shadow: 0 8px 25px #0003; font-size: 1.7rem; }
+    .whatsapp:hover { transform: translateY(-3px); }
+    .back-top { position: fixed; right: 25px; bottom: 88px; z-index: 110; width: 38px; height: 38px; border: 0; border-radius: 50%; display: none; background: white; box-shadow: var(--shadow); cursor: pointer; font-size: 1.2rem; }
+    .back-top.show { display: block; }
+    .reveal { opacity: 0; transform: translateY(18px); transition: opacity .6s ease, transform .6s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    @media (prefers-reduced-motion: reduce) { *, *:before, *:after { scroll-behavior: auto !important; transition: none !important; } .reveal { opacity: 1; transform: none; } }
+    @media (max-width: 900px) {
+      .nav-links { gap: 14px; }
+      .hero-grid { gap: 20px; }
+      .service-grid, .portfolio-grid { grid-template-columns: repeat(2, 1fr); }
+      .steps { grid-template-columns: repeat(2, 1fr); }
+      .why-grid { gap: 28px; }
+    }
+    @media (max-width: 700px) {
+      .container { width: min(100% - 30px, 560px); }
+      .topbar-inner { justify-content: center; text-align: center; }
+      .nav { min-height: 68px; }
+      .brand-name { font-size: .83rem; }
+      .brand-tag { font-size: .65rem; }
+      .brand-mark { width: 40px; height: 40px; }
+      .menu-toggle { display: block; }
+      .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; background: white; padding: 18px 22px 24px; border-bottom: 1px solid var(--line); box-shadow: var(--shadow); flex-direction: column; align-items: stretch; gap: 16px; }
+      .nav-links.open { display: flex; }
+      .nav-links .btn { width: 100%; }
+      .hero { padding: 62px 0 55px; }
+      .hero-grid, .why-grid, .contact-grid { grid-template-columns: 1fr; }
+      .hero-grid { gap: 10px; }
+      .hero h1 { font-size: clamp(2.55rem, 12vw, 3.7rem); }
+      .book-scene { min-height: 330px; }
+      .book { width: 185px; height: 255px; }
+      .book-title { font-size: 1.7rem; }
+      .float-one { right: 0; top: 22px; }
+      .float-two { left: 0; bottom: 18px; }
+      section { padding: 62px 0; }
+      .service-grid, .portfolio-grid, .steps { grid-template-columns: 1fr; }
+      .why-list { grid-template-columns: 1fr 1fr; gap: 15px; }
+      .cta-inner { align-items: flex-start; flex-direction: column; }
+      .contact-grid { gap: 30px; }
+      .contact-form { padding: 21px; }
+      .form-grid { grid-template-columns: 1fr; }
+      .field.full { grid-column: auto; }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <span>Creative book design & promotion for authors</span>
+      <span><a href="tel:+2348057640829">Call: 0805 764 0829</a> &nbsp;·&nbsp; <a href="mailto:waadmosglobal@gmail.com">Email us</a></span>
+    </div>
+  </div>
+
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#home" aria-label="WAADMOS Global Services home">
+        <span class="brand-mark">WGS</span>
+        <span><span class="brand-name">WAADMOS GLOBAL<br>SERVICES LIMITED</span><span class="brand-tag">Make your story stand out.</span></span>
+      </a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open navigation menu" aria-expanded="false">☰</button>
+      <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#process">How It Works</a>
+        <a href="#contact" class="btn">Get a Quote</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">For authors & publishers</span>
+          <h1>Give your book the <span>spotlight</span> it deserves.</h1>
+          <p>We create eye-catching book banners, engaging book trailers, and polished book mockups that help authors present their stories with confidence and promote them across digital platforms.</p>
+          <div class="hero-actions">
+            <a class="btn" href="#contact">Let's Create Your Book Design <span aria-hidden="true">→</span></a>
+            <a class="btn btn-outline" href="#services">Explore Services</a>
+          </div>
+          <div class="hero-note"><strong>Creative. Professional. Author-focused.</strong><br>Bring your book idea to us and let's make it stand out.</div>
+        </div>
+        <div class="book-scene" aria-label="Decorative book cover illustration">
+          <div class="glow"></div>
+          <div class="book">
+            <div class="book-kicker">A STORY TO REMEMBER</div>
+            <div class="book-title">BEYOND<br>THE<br>HORIZON</div>
+            <div class="book-sub">Every page opens a new world</div>
+            <div class="book-author">YOUR NAME HERE</div>
+          </div>
+          <div class="float-card float-one">✦ Book Banners<small>Promotional graphics</small></div>
+          <div class="float-card float-two">▶ Book Trailers<small>Stories in motion</small></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="services" id="services">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">What we do</span>
+          <h2>Creative services for your book</h2>
+          <p>Give your book a strong visual identity with promotional assets designed to catch attention and help communicate its appeal.</p>
+        </div>
+        <div class="service-grid">
+          <article class="service-card reveal">
+            <div class="service-icon" aria-hidden="true">🎨</div>
+            <h3>Book Banners</h3>
+            <p>Professional promotional banners featuring your book cover, title, author name, and key details—ideal for social media and online campaigns.</p>
+            <a class="text-link service-order" href="#contact" data-service="Book Banner">Order a book banner →</a>
+          </article>
+          <article class="service-card reveal">
+            <div class="service-icon" aria-hidden="true">🎬</div>
+            <h3>Book Trailers</h3>
+            <p>Bring your story to life with a compelling short promotional video that introduces your book and gives potential readers a reason to learn more.</p>
+            <a class="text-link service-order" href="#contact" data-service="Book Trailer">Create a book trailer →</a>
+          </article>
+          <article class="service-card reveal">
+            <div class="service-icon" aria-hidden="true">📚</div>
+            <h3>Book Mockups</h3>
+            <p>Showcase your cover in a realistic book presentation for your website, launch announcement, social posts, author page, or marketing materials.</p>
+            <a class="text-link service-order" href="#contact" data-service="Book Mockup">Design a book mockup →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="why">
+      <div class="container why-grid">
+        <div class="why-panel reveal">
+          <span class="eyebrow">Your creative partner</span>
+          <h3>Your book deserves more than a simple post.</h3>
+          <p>We help turn your book details and creative vision into visual content you can share with your audience. Tell us about your book, your genre, and your goals—we'll discuss a design direction that fits.</p>
+          <a class="btn" href="#contact">Discuss Your Project →</a>
+        </div>
+        <div class="why-list">
+          <div class="why-item reveal"><span class="check">✓</span><h3>Designed around your book</h3><p>Visuals shaped around your cover, genre, tone, and intended audience.</p></div>
+          <div class="why-item reveal"><span class="check">✓</span><h3>Social-ready creatives</h3><p>Assets planned for digital promotion and sharing on suitable platforms.</p></div>
+          <div class="why-item reveal"><span class="check">✓</span><h3>Clear communication</h3><p>Share your brief and requirements before work begins.</p></div>
+          <div class="why-item reveal"><span class="check">✓</span><h3>A simple process</h3><p>From your first enquiry to design review and final delivery.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="process" id="process">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Simple process</span>
+          <h2>From idea to finished creative</h2>
+          <p>Getting started is straightforward. We’ll discuss your needs and agree on the project details before production.</p>
+        </div>
+        <div class="steps">
+          <article class="step reveal"><span class="step-number">STEP 01</span><h3>Tell us about your book</h3><p>Share your book title, genre, cover, author name, and the service you need.</p></article>
+          <article class="step reveal"><span class="step-number">STEP 02</span><h3>Agree on the brief</h3><p>We discuss the creative direction, delivery format, timeline, revisions, and price.</p></article>
+          <article class="step reveal"><span class="step-number">STEP 03</span><h3>Creative production</h3><p>We prepare the agreed banner, trailer, or mockup for your review.</p></article>
+          <article class="step reveal"><span class="step-number">STEP 04</span><h3>Review & delivery</h3><p>We handle agreed revisions and deliver the final files using the agreed method.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="portfolio">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Creative showcase</span>
+          <h2>Visual ideas for your next launch</h2>
+          <p>Explore sample-style concepts for the three services we offer.</p>
+        </div>
+        <div class="portfolio-grid">
+          <article class="portfolio-card reveal">
+            <div class="portfolio-art art-banner"><div><small>YOUR NEXT FAVOURITE READ</small><strong>THE LAST<br>CHAPTER</strong><span>A NOVEL BY YOUR NAME</span></div></div>
+            <div class="portfolio-caption"><h3>Book Banner Concept</h3><p>A bold graphic for online promotion.</p></div>
+          </article>
+          <article class="portfolio-card reveal">
+            <div class="portfolio-art art-trailer"><div><div class="play">▶</div><strong style="font:900 1.7rem Georgia,serif">Every story has a secret.</strong><div style="margin-top:8px;color:#e8b45c">BOOK TRAILER CONCEPT</div></div></div>
+            <div class="portfolio-caption"><h3>Book Trailer Concept</h3><p>A cinematic direction for a short promo video.</p></div>
+          </article>
+          <article class="portfolio-card reveal">
+            <div class="portfolio-art art-mockup"><div class="mini-book"><small>A NOVEL</small><strong>THE<br>HIDDEN<br>WORLD</strong><small>YOUR NAME</small></div></div>
+            <div class="portfolio-caption"><h3>Book Mockup Concept</h3><p>A realistic-style presentation of your cover.</p></div>
+          </article>
+        </div>
+        <p class="portfolio-note">These are illustrative concepts, not client work. Replace them with your own completed projects as your portfolio grows.</p>
+      </div>
+    </section>
+
+    <div class="cta-band">
+      <div class="container cta-inner">
+        <div><h2>Ready to make your book stand out?</h2><p>Tell us what you're publishing and which creative service you need.</p></div>
+        <a class="btn btn-dark" href="#contact">Start Your Project →</a>
+      </div>
+    </div>
+
+    <section class="contact" id="contact">
+      <div class="container contact-grid">
+        <div class="contact-copy reveal">
+          <span class="eyebrow">Let's talk</span>
+          <h2>Tell us about your book.</h2>
+          <p>Use the enquiry form to prepare a message for our team. It will open in your email app so you can review and send it.</p>
+          <div class="contact-details">
+            <div class="contact-detail"><div class="detail-icon">✉</div><div><strong>Email</strong><a href="mailto:waadmosglobal@gmail.com">waadmosglobal@gmail.com</a></div></div>
+            <div class="contact-detail"><div class="detail-icon">☎</div><div><strong>Phone</strong><a href="tel:+2348057640829">08057640829</a></div></div>
+            <div class="contact-detail"><div class="detail-icon">⌖</div><div><strong>Address</strong><span>NNPC Area, Apata, Ibadan, Oyo State, Nigeria</span></div></div>
+          </div>
+        </div>
+        <form class="contact-form reveal" id="enquiryForm">
+          <div class="form-grid">
+            <div class="field"><label for="name">Your name *</label><input id="name" name="name" required autocomplete="name" placeholder="Full name"></div>
+            <div class="field"><label for="email">Your email *</label><input id="email" name="email" type="email" required autocomplete="email" placeholder="you@example.com"></div>
+            <div class="field"><label for="bookTitle">Book title</label><input id="bookTitle" name="bookTitle" placeholder="Title of your book"></div>
+            <div class="field"><label for="service">Service needed *</label><select id="service" name="service" required><option value="">Choose a service</option><option>Book Banner</option><option>Book Trailer</option><option>Book Mockup</option><option>Banner + Trailer + Mockup</option><option>I'm not sure yet</option></select></div>
+            <div class="field full"><label for="details">Project details *</label><textarea id="details" name="details" required placeholder="Tell us about your book, your ideas, deadline, or design preferences..."></textarea></div>
+          </div>
+          <p class="form-help">Your email app will open with the message prepared. This demo form does not store your information on a server.</p>
+          <button class="btn btn-dark" type="submit">Prepare My Enquiry →</button>
+          <div class="form-message" id="formMessage" role="status">Your email draft is ready. Please review it and press Send in your email app.</div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-top">
+        <div>
+          <a class="brand" href="#home"><span class="brand-mark">WGS</span><span class="brand-name">WAADMOS GLOBAL<br>SERVICES LIMITED</span></a>
+          <p class="footer-copy">Book banners, book trailers, and book mockups designed to help authors present and promote their stories.</p>
+        </div>
+        <div class="footer-links"><a href="#services">Services</a><a href="#portfolio">Portfolio</a><a href="#process">How It Works</a><a href="#contact">Contact</a></div>
+      </div>
+      <div class="footer-bottom"><span>© <span id="year"></span> WAADMOS GLOBAL SERVICES LIMITED. All rights reserved.</span><span>Made for stories worth sharing.</span></div>
+    </div>
+  </footer>
+
+  <button class="back-top" id="backTop" aria-label="Back to top">↑</button>
+  <a class="whatsapp" href="https://wa.me/2348057640829?text=Hello%20WAADMOS%20GLOBAL%20SERVICES%20LIMITED%2C%20I%20am%20interested%20in%20your%20book%20design%20services." target="_blank" rel="noopener noreferrer" aria-label="Chat with us on WhatsApp" title="Chat on WhatsApp">✆</a>
+
+  <script>
+    // Mobile navigation
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+    menuToggle.addEventListener('click', () => {
+      const isOpen = navLinks.classList.toggle('open');
+      menuToggle.setAttribute('aria-expanded', String(isOpen));
+      menuToggle.setAttribute('aria-label', isOpen ? 'Close navigation menu' : 'Open navigation menu');
+      menuToggle.textContent = isOpen ? '×' : '☰';
+    });
+    navLinks.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+      navLinks.classList.remove('open');
+      menuToggle.setAttribute('aria-expanded', 'false');
+      menuToggle.setAttribute('aria-label', 'Open navigation menu');
+      menuToggle.textContent = '☰';
+    }));
+
+    // Prefill the selected service when visitors click a service card.
+    document.querySelectorAll('.service-order').forEach(link => {
+      link.addEventListener('click', () => {
+        document.getElementById('service').value = link.dataset.service;
+      });
+    });
+
+    // Email enquiry: opens the visitor's email app; no server/database is connected.
+    document.getElementById('enquiryForm').addEventListener('submit', event => {
+      event.preventDefault();
+      const form = event.currentTarget;
+      if (!form.reportValidity()) return;
+      const data = new FormData(form);
+      const subject = `Book Design Enquiry: ${data.get('service')}`;
+      const body = [
+        'Hello WAADMOS GLOBAL SERVICES LIMITED,',
+        '',
+        `Name: ${data.get('name')}`,
+        `Email: ${data.get('email')}`,
+        `Book title: ${data.get('bookTitle') || 'Not provided'}`,
+        `Service needed: ${data.get('service')}`,
+        '',
+        'Project details:',
+        data.get('details'),
+        '',
+        'I look forward to hearing from you.'
+      ].join('\\n');
+      document.getElementById('formMessage').style.display = 'block';
+      window.location.href = `mailto:waadmosglobal@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    });
+
+    // Reveal content as it scrolls into view.
+    const revealItems = document.querySelectorAll('.reveal');
+    if ('IntersectionObserver' in window) {
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12 });
+      revealItems.forEach(item => observer.observe(item));
+    } else {
+      revealItems.forEach(item => item.classList.add('visible'));
+    }
+
+    // Back-to-top button and current year.
+    const backTop = document.getElementById('backTop');
+    window.addEventListener('scroll', () => backTop.classList.toggle('show', window.scrollY > 500), { passive: true });
+    backTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
